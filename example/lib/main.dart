@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
                     width: double.infinity,
                     fit: BoxFit.cover,
                   ),
+                  Text("Responsive Smart Grid View")
                 ]),
               ),
             ),

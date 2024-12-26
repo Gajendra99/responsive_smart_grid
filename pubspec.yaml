@@ -1,7 +1,7 @@
 name: responsive_smart_grid
-description: "A new Flutter package project."
-version: 0.0.1
-homepage:
+description: "Responsive Smart Grid is a Flutter package that provides a dynamic, adjustable grid layout for your applications. It allows developers to easily create grids with customizable spacing, decorations, padding, and transformations, adapting seamlessly to different screen sizes and use cases."
+version: 1.0.0
+homepage: https://github.com/Gajendra99/responsive_smart_grid.git
 
 environment:
   sdk: ^3.5.3

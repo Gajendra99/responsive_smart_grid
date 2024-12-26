@@ -6,7 +6,8 @@ import 'models/grid_item.dart';
 class ResponsiveSmartGrid extends StatelessWidget {
   final List<GridItem> items;
   final int crossAxisCount;
-  EdgeInsets? axisSpacing;
+  double? horizontalSpacing;
+  double? verticalSpacing;
   BoxDecoration? tileBoxDecoration;
   EdgeInsets? tilePadding;
   Matrix4? tileTransform;
@@ -14,7 +15,8 @@ class ResponsiveSmartGrid extends StatelessWidget {
   ResponsiveSmartGrid({
     required this.items,
     required this.crossAxisCount,
-    this.axisSpacing,
+    this.horizontalSpacing,
+    this.verticalSpacing,
     this.tileBoxDecoration,
     this.tilePadding,
     this.tileTransform,
@@ -51,7 +53,9 @@ class ResponsiveSmartGrid extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: columns[index].map((item) {
                   return Container(
-                    margin: axisSpacing ?? EdgeInsets.all(4.0),
+                    margin: EdgeInsets.symmetric(
+                        horizontal: horizontalSpacing ?? 4.0,
+                        vertical: verticalSpacing ?? 4.0),
                     padding: tilePadding,
                     decoration: tileBoxDecoration,
                     transform: tileTransform,
